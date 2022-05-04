@@ -19,5 +19,6 @@ int main()
     //cout << cwf.zero_fuel(50, 25, 2) << endl;
     //cout << cwf.zero_fuel(100, 50, 1) << endl;
     //cout << "-------------" << endl;
+    cout << cwf.isDividedby(-12, 2, -6) << endl;
 
 }
