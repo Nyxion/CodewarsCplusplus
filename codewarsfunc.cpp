@@ -95,3 +95,15 @@ bool CodewarsFunc::isDividedby(int number, int a, int b)
 
 	return number % a == 0 && number % b == 0;
 }
+
+std::string CodewarsFunc::removeExclamationMarks(std::string str)
+{
+	/*
+	Write function RemoveExclamationMarks which removes all exclamation marks from a given string.
+	*/
+	std::string new_string;
+	for (auto i : str)
+		if (i != '!')
+			new_string += i;
+	return new_string;
+}

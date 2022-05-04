@@ -20,5 +20,7 @@ int main()
     //cout << cwf.zero_fuel(100, 50, 1) << endl;
     //cout << "-------------" << endl;
     cout << cwf.isDividedby(-12, 2, -6) << endl;
+    cout << "-------------" << endl;
+    cout << cwf.removeExclamationMarks("Hello World!!!") << endl;
 
 }
