@@ -107,3 +107,18 @@ std::string CodewarsFunc::removeExclamationMarks(std::string str)
 			new_string += i;
 	return new_string;
 }
+std::string CodewarsFunc::repeat_str(size_t repeat, const std::string& str)
+{
+	/*
+	Write a function called repeatStr which repeats the given string string exactly n times.
+
+	repeat_str(6, "I") // "IIIIII"
+	repeat_str(5, "Hello") // "HelloHelloHelloHelloHello"
+	*/
+	std::string new_string;
+	for (size_t i = 0; i < repeat; i++)
+	{
+		new_string += str;
+	}
+	return new_string;
+}
