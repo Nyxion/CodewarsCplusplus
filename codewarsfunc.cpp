@@ -122,3 +122,14 @@ std::string CodewarsFunc::repeat_str(size_t repeat, const std::string& str)
 	}
 	return new_string;
 }
+int CodewarsFunc::square_sum(const std::vector<int>& numbers) {
+	/*
+	Complete the square sum function so that it squares each number passed into it and then sums the results together.
+
+	For example, for [1, 2, 2] it should return 9 because 1^2 + 2^2 + 2^2 = 9.
+	*/
+	int sum = 0;
+	for (auto i : numbers)
+		sum += i * i;
+	return sum;
+}

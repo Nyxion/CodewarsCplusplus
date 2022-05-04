@@ -16,5 +16,6 @@ public:
 	bool isDividedby(int number, int a, int b);
 	std::string removeExclamationMarks(std::string str);
 	std::string repeat_str(size_t repeat, const std::string& str);
+	int square_sum(const std::vector<int>& numbers);
 };
 

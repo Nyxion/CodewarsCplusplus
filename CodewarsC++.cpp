@@ -22,6 +22,9 @@ int main()
     //cout << cwf.isDividedby(-12, 2, -6) << endl;
     //cout << "-------------" << endl;
     //cout << cwf.removeExclamationMarks("Hello World!!!") << endl;
-    cout << cwf.repeat_str(5, "Hello") << endl;
+    //cout << "-------------" << endl;
+    //cout << cwf.repeat_str(5, "Hello") << endl;
+    //cout << "-------------" << endl;
+    cout << cwf.square_sum(std::vector<int>{1,2,3,4}) << endl;
 
 }
