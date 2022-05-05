@@ -25,6 +25,9 @@ int main()
     //cout << "-------------" << endl;
     //cout << cwf.repeat_str(5, "Hello") << endl;
     //cout << "-------------" << endl;
-    cout << cwf.square_sum(std::vector<int>{1,2,3,4}) << endl;
-
+    //cout << cwf.square_sum(std::vector<int>{1,2,3,4}) << endl;
+    cout << "-------------" << endl;
+    cout << cwf.sum(std::vector<int>{1, 2, -3, 3, 4}) << endl;
+    
+    return 0;
 }

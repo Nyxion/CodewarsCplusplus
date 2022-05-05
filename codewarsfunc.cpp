@@ -133,3 +133,11 @@ int CodewarsFunc::square_sum(const std::vector<int>& numbers) {
 		sum += i * i;
 	return sum;
 }
+int CodewarsFunc::sum(std::vector<int> nums)
+{
+	if (nums.size() <= 0) return 0;
+	int returnable = 0;
+	for (int i : nums)
+		returnable += i;
+	return returnable;
+}
