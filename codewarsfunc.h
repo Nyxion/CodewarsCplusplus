@@ -1,9 +1,11 @@
 #pragma once
 #include <string>
 #include <vector>
+#include <algorithm>
 #include <iostream>
 #include <sstream>
 #include <iomanip>
+#include <queue>
 
 class CodewarsFunc
 {
@@ -23,5 +25,6 @@ public:
 	std::vector<std::string> split_string_evenly(const std::string &s);
 	std::string seriesSum(int n);
 	int get_sum(int a, int b);
+	long queueTime(std::vector<int> customers, int n);
 };
 
