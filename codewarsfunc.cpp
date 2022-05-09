@@ -20,6 +20,7 @@ std::string CodewarsFunc::bmi(double w, double h)
 	{
 		return "Obese";
 	}
+	return "Normal";
 }
 
 std::string CodewarsFunc::number_to_String(int num)
@@ -140,4 +141,30 @@ int CodewarsFunc::sum(std::vector<int> nums)
 	for (int i : nums)
 		returnable += i;
 	return returnable;
+}
+std::vector<std::string> CodewarsFunc::split_string_evenly(const std::string &s)
+{
+	/*
+	Complete the solution so that it splits the string into pairs of two characters. 
+	If the string contains an odd number of characters then it should replace the missing second character of the final pair with an underscore ('_').
+
+	Examples:
+
+	* 'abc' =>  ['ab', 'c_']
+	* 'abcdef' => ['ab', 'cd', 'ef']
+	*/
+	
+	std::vector<std::string> new_array;
+	for (size_t i = 0; i < s.size(); i+=2)
+	{
+		std::string pair = "";
+		pair.push_back(s[i]);
+		if(i+1 < s.size())
+			pair.push_back(s[i + 1]);
+		new_array.push_back(pair);
+	}
+
+	if (s.length() % 2 != 0)
+		new_array.back().push_back('_');
+	return new_array;
 }

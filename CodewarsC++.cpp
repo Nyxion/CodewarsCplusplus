@@ -2,6 +2,8 @@
 
 using namespace std;
 
+
+
 int main()
 {
     CodewarsFunc cwf;
@@ -26,8 +28,13 @@ int main()
     //cout << cwf.repeat_str(5, "Hello") << endl;
     //cout << "-------------" << endl;
     //cout << cwf.square_sum(std::vector<int>{1,2,3,4}) << endl;
+    //cout << "-------------" << endl;
+    //cout << cwf.sum(std::vector<int>{1, 2, -3, 3, 4}) << endl;
     cout << "-------------" << endl;
-    cout << cwf.sum(std::vector<int>{1, 2, -3, 3, 4}) << endl;
+    vector<string> a = cwf.split_string_evenly("abcdefg");
+    copy(a.begin(),
+        a.end(),
+        ostream_iterator<string>(cout, " "));
     
     return 0;
 }

@@ -18,5 +18,6 @@ public:
 	std::string repeat_str(size_t repeat, const std::string& str);
 	int square_sum(const std::vector<int>& numbers);
 	int sum(std::vector<int> nums);
+	std::vector<std::string> split_string_evenly(const std::string &s);
 };
 
