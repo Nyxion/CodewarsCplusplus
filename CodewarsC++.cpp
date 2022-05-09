@@ -30,11 +30,13 @@ int main()
     //cout << cwf.square_sum(std::vector<int>{1,2,3,4}) << endl;
     //cout << "-------------" << endl;
     //cout << cwf.sum(std::vector<int>{1, 2, -3, 3, 4}) << endl;
+    //cout << "-------------" << endl;
+    //vector<string> a = cwf.split_string_evenly("abcdefg");
+    //copy(a.begin(),
+    //    a.end(),
+    //    ostream_iterator<string>(cout, " "));
     cout << "-------------" << endl;
-    vector<string> a = cwf.split_string_evenly("abcdefg");
-    copy(a.begin(),
-        a.end(),
-        ostream_iterator<string>(cout, " "));
-    
+    cout << cwf.seriesSum(9) << endl; // 1.77
+
     return 0;
 }

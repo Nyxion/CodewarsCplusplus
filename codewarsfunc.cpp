@@ -22,12 +22,10 @@ std::string CodewarsFunc::bmi(double w, double h)
 	}
 	return "Normal";
 }
-
 std::string CodewarsFunc::number_to_String(int num)
 {
 	return std::to_string(num);
 }
-
 std::vector<std::string> CodewarsFunc::string_to_array(const std::string& s)
 {
 	std::vector<std::string> string_array;
@@ -49,7 +47,6 @@ std::vector<std::string> CodewarsFunc::string_to_array(const std::string& s)
 	test_array.push_back(s.substr(pos_start));
 	return string_array;
 }
-
 bool CodewarsFunc::zero_fuel(uint32_t distance_to_pump, uint32_t mpg, uint32_t fuel_left)
 {
 	/*
@@ -75,7 +72,6 @@ bool CodewarsFunc::zero_fuel(uint32_t distance_to_pump, uint32_t mpg, uint32_t f
 		return false;
 	return true;
 }
-
 bool CodewarsFunc::isDividedby(int number, int a, int b)
 {
 	/*
@@ -96,7 +92,6 @@ bool CodewarsFunc::isDividedby(int number, int a, int b)
 
 	return number % a == 0 && number % b == 0;
 }
-
 std::string CodewarsFunc::removeExclamationMarks(std::string str)
 {
 	/*
@@ -167,4 +162,41 @@ std::vector<std::string> CodewarsFunc::split_string_evenly(const std::string &s)
 	if (s.length() % 2 != 0)
 		new_array.back().push_back('_');
 	return new_array;
+}
+std::string CodewarsFunc::seriesSum(int n)
+{
+	/*
+	Task:
+		Your task is to write a function which returns the sum of following series upto nth term(parameter).
+
+		Series: 1 + 1/4 + 1/7 + 1/10 + 1/13 + 1/16 +...
+	Rules:
+		You need to round the answer to 2 decimal places and return it as String.
+
+		If the given value is 0 then it should return 0.00
+
+		You will only be given Natural Numbers as arguments.
+
+	Examples:(Input --> Output)
+		1 --> 1 --> "1.00"
+		2 --> 1 + 1/4 --> "1.25"
+		5 --> 1 + 1/4 + 1/7 + 1/10 + 1/13 --> "1.57"
+	*/
+
+	if (n <= 0) return "0.00";
+
+	float sum = 0;
+	float diviser = 1;
+	for (size_t i = 0; i < n; i++)
+	{
+		float div = 1 / diviser;
+		sum += div;
+		if(n > 1) diviser += 3;
+	}
+	float rounded_down = floor(sum * 100) / 100;
+	std::stringstream ss;
+	ss << std::fixed << std::setprecision(2) << rounded_down;
+	std::string s = ss.str();
+
+	return s;
 }
