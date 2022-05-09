@@ -22,5 +22,6 @@ public:
 	int sum(std::vector<int> nums);
 	std::vector<std::string> split_string_evenly(const std::string &s);
 	std::string seriesSum(int n);
+	int get_sum(int a, int b);
 };
 

@@ -35,8 +35,10 @@ int main()
     //copy(a.begin(),
     //    a.end(),
     //    ostream_iterator<string>(cout, " "));
+    //cout << "-------------" << endl;
+    //cout << cwf.seriesSum(9) << endl; // 1.77
     cout << "-------------" << endl;
-    cout << cwf.seriesSum(9) << endl; // 1.77
+    cout << cwf.get_sum(0, 1);
 
     return 0;
 }
