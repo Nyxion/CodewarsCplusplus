@@ -312,3 +312,39 @@ bool CodewarsFunc::is_isogram(std::string str)
 	if (samesis > 0) return false;
 	return true;
 }
+std::string CodewarsFunc::duplicate_encoder(const std::string& word)
+{
+	/*
+	The goal of this exercise is to convert a string to a new string where each character in the new string is "(" if that character appears only once in the original string, 
+	or ")" if that character appears more than once in the original string. Ignore capitalization when determining if a character is a duplicate.
+
+	Examples
+		"din"      =>  "((("
+		"recede"   =>  "()()()"
+		"Success"  =>  ")())())"
+		"(( @"     =>  "))((" 
+	Notes
+		Assertion messages may be unclear about what they display in some languages. If you read "...It Should encode XXX", the "XXX" is the expected result, not the input!
+	*/
+	if (word.length() < 1) return "";
+	std::string new_str = word;
+	std::for_each(new_str.begin(), new_str.end(), [](char& c) {
+		c = ::tolower(c);
+		});
+	std::string change_me = new_str;
+	int count = 0;
+	for (size_t i = 0; i < new_str.size(); i++)
+	{
+		size_t c = std::count(new_str.begin(), new_str.end(), new_str[i]);
+		if (c > 1)
+		{
+			change_me[i] = ')';
+		}
+		else
+		{
+			change_me[i] = '(';
+		}
+	}
+
+	return change_me;
+}

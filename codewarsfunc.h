@@ -27,5 +27,6 @@ public:
 	int get_sum(int a, int b);
 	long queueTime(std::vector<int> customers, int n);
 	bool is_isogram(std::string str);
+	std::string duplicate_encoder(const std::string& word);
 };
 
