@@ -26,5 +26,6 @@ public:
 	std::string seriesSum(int n);
 	int get_sum(int a, int b);
 	long queueTime(std::vector<int> customers, int n);
+	bool is_isogram(std::string str);
 };
 

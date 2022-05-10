@@ -39,11 +39,19 @@ int main()
     //cout << cwf.seriesSum(9) << endl; // 1.77
     //cout << "-------------" << endl;
     //cout << cwf.get_sum(0, 1);
+    //cout << "-------------" << endl;
+    //cout << "Should return 12: " << cwf.queueTime(std::vector<int>{5, 3, 4}, 1) << endl; // 12
+    //cout << "Should return 10: " << cwf.queueTime(std::vector<int>{10, 2, 3, 3}, 2) << endl; // 10
+    //cout << "Should return 12: " << cwf.queueTime(std::vector<int>{2, 3, 10}, 2) << endl; // 12
+    //cout << "should return 8: " << cwf.queueTime(std::vector<int>{3, 8, 3, 4, 5}, 100) << endl;
     cout << "-------------" << endl;
-    cout << "Should return 12: " << cwf.queueTime(std::vector<int>{5, 3, 4}, 1) << endl; // 12
-    cout << "Should return 10: " << cwf.queueTime(std::vector<int>{10, 2, 3, 3}, 2) << endl; // 10
-    cout << "Should return 12: " << cwf.queueTime(std::vector<int>{2, 3, 10}, 2) << endl; // 12
-    cout << "should return 8: " << cwf.queueTime(std::vector<int>{3, 8, 3, 4, 5}, 100) << endl;
+    cout << "Should return 0: " << cwf.is_isogram("moOse") << endl;
+    cout << "Should return 0: " << cwf.is_isogram("aba") << endl;
+    cout << "Should return 1: " << cwf.is_isogram("Dermatoglyphics") << endl;
+    cout << "Should return 1: " << cwf.is_isogram("") << endl;
+
+
+
 
     return 0;
 }

@@ -283,3 +283,32 @@ long CodewarsFunc::queueTime(std::vector<int> customers, int n)
 	}
 	return tills.back();
 }
+bool CodewarsFunc::is_isogram(std::string str)
+{
+	/*
+	An isogram is a word that has no repeating letters, consecutive or non-consecutive. 
+	Implement a function that determines whether a string that contains only letters is an isogram. 
+	Assume the empty string is an isogram. Ignore letter case.
+
+	Example: (Input --> Output)
+
+		"Dermatoglyphics" --> true
+		"aba" --> false
+		"moOse" --> false (ignore letter case)
+	*/
+	// is an isogram
+	if (str.length() < 1) return true;
+
+	size_t samesis = 0;
+	std::for_each(str.begin(), str.end(), [](char& c) {
+		c = ::tolower(c);
+		});
+
+	for (size_t i = 0; i < str.size(); i++)
+	{
+		size_t count = std::count(str.begin(), str.end(), str[i]);
+		if (count > 1) samesis++;
+	}
+	if (samesis > 0) return false;
+	return true;
+}
